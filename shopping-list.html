@@ -29,7 +29,7 @@
 </body>
 
 <script>
-  function createListItemByInput(inputBoxEntryValue) {
+function createListItemByInput(inputBoxEntryValue) {
     var inputBox = document.getElementById("itemEnter");
     var inputBoxEntryValue = inputBox.value;
 
@@ -40,11 +40,16 @@
     li.className = 'itemClassName'
     shoppingItemsList.appendChild(li);
 
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = "Delete"
+    li.appendChild(deleteButton);
 
+    deleteButton.addEventListener('click', function () {
+      var nodeToRemove = document.getElementsByClassName('itemClassName');
+      li.remove();
+    });
 
-
-    inputBox.value = '';
-    inputBox.focus();
+   
   };
 
 
