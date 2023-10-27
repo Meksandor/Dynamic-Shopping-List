@@ -29,7 +29,7 @@
 </body>
 
 <script>
-function createListItemByInput(inputBoxEntryValue) {
+  function createListItemByInput(inputBoxEntryValue) {
     var inputBox = document.getElementById("itemEnter");
     var inputBoxEntryValue = inputBox.value;
 
@@ -49,7 +49,8 @@ function createListItemByInput(inputBoxEntryValue) {
       li.remove();
     });
 
-   
+    inputBox.value = '';
+    inputBox.focus();
   };
 
 
