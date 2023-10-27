@@ -29,7 +29,23 @@
 </body>
 
 <script>
+  function createListItemByInput(inputBoxEntryValue) {
+    var inputBox = document.getElementById("itemEnter");
+    var inputBoxEntryValue = inputBox.value;
 
+    const shoppingItemsList = document.getElementById('shoppingItems')
+
+    let li = document.createElement('li');
+    li.textContent = inputBoxEntryValue;
+    li.className = 'itemClassName'
+    shoppingItemsList.appendChild(li);
+
+
+
+
+    inputBox.value = '';
+    inputBox.focus();
+  };
 
 
 </script>
